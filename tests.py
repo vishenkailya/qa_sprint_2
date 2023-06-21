@@ -16,10 +16,11 @@ class TestBooksCollector:
         collector.set_book_rating('Capital. Part 2', 10)
         assert collector.get_book_rating('Capital. Part 2') == None
 
-    def test_set_book_rating_above_10_rating_equals_1(self):
+    @pytest.mark.parametrize('rating', [11, 15, 100])
+    def test_set_book_rating_above_10_rating_equals_1(self, rating):
         collector = BooksCollector()
         collector.add_new_book('Бойцовский клуб')
-        collector.set_book_rating('Бойцовский клуб', 11)
+        collector.set_book_rating('Бойцовский клуб', rating)
         assert collector.get_book_rating('Бойцовский клуб') == 1
 
     @pytest.mark.parametrize('rating', [0, -1, -10])
