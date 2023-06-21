@@ -1,1 +1,2 @@
-# qa_python
+test_add_new_book_add_two_books: Добавляем 2 книги
+test_set_book_rating_to_book_not_in_list_none_rating: Получаем рейтинг книг, которых нет в списке
