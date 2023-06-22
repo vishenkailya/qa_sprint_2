@@ -1,6 +1,6 @@
 import pytest
 from main import BooksCollector
-
+#Не увидел, что после каждого замечания надо делать коммит, поэтому случайно закоммитил все изменения сразу
 
 class TestBooksCollector:
 
